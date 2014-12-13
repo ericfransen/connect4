@@ -1,13 +1,11 @@
 <div class="player_turn" id="player1_turn">PLAYER 1 TURN</div>
 
 <div class="board">
-
+  <% num = 1 %>
   <% @spots.each do |spot| %>
-    <div class="spot white"> </div>
-
-    <!-- <div class="spot" style="background: <%= spot.color %>"> </div> -->
+    <div class="spot white" id="spot_<%= num %>"> </div>
+    <% num += 1 %>
   <% end %>
-
 </div>
 
 <div class="player_turn" id="player2_turn">PLAYER 2 TURN</div>

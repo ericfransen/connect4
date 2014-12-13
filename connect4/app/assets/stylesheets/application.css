@@ -23,7 +23,18 @@ body {
    border: solid;
    float: left;
    border-radius: 50%;
+   cursor: pointer;
  }
+ .white {
+    background-color: white;
+ }
+ .blue {
+    background-color: #028482;
+ }
+ .red {
+    background-color: Tomato;
+ }
+
  .board {
    width: 750px;
    margin:auto;

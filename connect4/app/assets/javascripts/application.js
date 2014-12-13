@@ -21,13 +21,16 @@ $(document).ready(function () {
   var turn = 1
 
   $("div.white").click(function() {
-    $( this ).fadeOut('slow', function(){
-      if(turn % 2 != 0) {
-        $( this ).removeClass('white').addClass('blue').fadeIn('slow');
-      } else {
-        $( this ).removeClass('white').addClass('red').fadeIn('slow');
-      }
-    });
-    turn++
+    if( $(this).hasClass('white')) {
+      $( this ).fadeOut('slow', function(){
+        if(turn % 2 != 0) {
+          $( this ).removeClass('white').addClass('blue').fadeIn('slow');
+          turn++
+        } else {
+          $( this ).removeClass('white').addClass('red').fadeIn('slow');
+          turn++
+        }
+      });
+    }
   });
 });

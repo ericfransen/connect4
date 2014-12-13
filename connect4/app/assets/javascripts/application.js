@@ -28,27 +28,6 @@ $(document).ready(function () {
         $( this ).removeClass('white').addClass('red').fadeIn('slow');
       }
     });
-    alert(turn)
-    alert(turn % 0)
-
     turn++
   });
 });
-
-
-// if(turn % 2 != 0) {
-//   $("div.white").click(function() {
-//     $( this ).fadeOut('slow', function(){
-//       $( this ).removeClass('white').addClass('blue').fadeIn('slow');
-//     });
-//     alert(turn)
-//     turn++
-//   });
-// } else if(turn % 2 ===0) {
-//   $("div.white").click(function() {
-//     $( this ).fadeOut('slow', function(){
-//       $( this ).removeClass('white').addClass('red').fadeIn('slow');
-//     });
-//     turn++
-//   });
-// }

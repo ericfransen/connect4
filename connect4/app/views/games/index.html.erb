@@ -1,10 +1,19 @@
 <div class="player_turn" id="player1_turn">PLAYER 1 TURN</div>
 
 <div class="board">
-  <% num = 1 %>
+  <% @col = 1 %>
+  <% @row = 6 %>
+  <% @row_count = 1 %>
   <% @spots.each do |spot| %>
-    <div class="spot white" id="spot_<%= num %>"> </div>
-    <% num += 1 %>
+    <div class="spot white col_<%= @col %> row_<%= @row %>"> </div>
+    <% @col += 1 %>
+    <% @row_count += 1 %>
+    <% @col = 1 if @col == 8 %>
+    <!-- <% row -= 1 && row_count = 1 if row_count == 7 %> -->
+    <% if @row_count == 8 %>
+      <% @row -= 1 %>
+      <% @row_count = 1 %>
+    <% end %>
   <% end %>
 </div>
 
